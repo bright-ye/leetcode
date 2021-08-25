@@ -1,5 +1,2 @@
-# Mylearn
+# leetcode笔记
 
-- java
-- leetcode
-- 前端
