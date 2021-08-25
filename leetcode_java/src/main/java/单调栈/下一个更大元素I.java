@@ -24,20 +24,7 @@ public class 下一个更大元素I {
 
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int[] result = new int[nums1.length];
-        Arrays.fill(result,-1);
-        Map<Integer,Integer> map = new HashMap<>();
-        Stack<Integer> stack = new Stack<>();
-        stack.push(0);
-        for(int i = 1;i<nums2.length;i++){
-            int curr = nums2[i];
-            while (!stack.isEmpty() && nums2[stack.peek()] < curr){
-                map.put(nums2[stack.pop()],curr);
-            }
-            stack.push(i);
-        }
-        for(int i = 0;i<nums1.length;i++){
-            result[i] = map.getOrDefault(nums1[i],-1);
-        }
+
         return result;
     }
 

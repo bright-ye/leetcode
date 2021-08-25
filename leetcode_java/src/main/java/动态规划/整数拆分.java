@@ -1,7 +1,5 @@
 package 动态规划;
 
-import com.sun.imageio.plugins.jpeg.JPEGStreamMetadataFormat;
-
 public class 整数拆分 {
     public static void main(String[] args) {
         整数拆分 instance = new 整数拆分();

@@ -20,10 +20,8 @@ public class 每日温度 {
         int[] result = new int[temperatures.length];
 
         Stack<Integer> stack = new Stack<>();
-        stack.push(0);
-        for(int i = 1;i<temperatures.length;i++){
-            int curr = temperatures[i];
-            while(!stack.isEmpty() && temperatures[stack.peek()] < curr){
+        for(int i = 0;i<temperatures.length;i++){
+            while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]){
                 result[stack.peek()] = i - stack.pop();
             }
             stack.push(i);
